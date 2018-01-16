@@ -10,11 +10,14 @@ namespace Snake
 
         public Food(Random rand)
         {
-
+            Generate(rand);
+            Piece = new Rectangle(x, y, width, height);
         }
         public void Draw(Graphics graphics)
         {
-
+            Piece.X = x;
+            Piece.Y = y;
+            graphics.FillRectangle(Brushes.Blue, Piece);
         }
         public void Generate(Random rand)
         {
